@@ -2,12 +2,12 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="51755ea7-3cbd-42cf-a51b-6d91c99d5976" name="https://github.com/GeorgeBramus/demo_app.git" url="https://github.com/GeorgeBramus/demo_app.git">
-        <fileTransfer host="https://github.com/GeorgeBramus/demo_app.git" port="21">
+      <webServer id="51755ea7-3cbd-42cf-a51b-6d91c99d5976" name="https://github.com/GeorgeBramus/demo_app.git" url="https://github.com/GeorgeBramus/test_app.git">
+        <fileTransfer host="https://github.com" port="22" rootFolder="" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
-          <option name="port" value="21" />
+          <option name="port" value="22" />
         </fileTransfer>
       </webServer>
     </option>

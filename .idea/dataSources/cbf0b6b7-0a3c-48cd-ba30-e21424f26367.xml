@@ -40,5 +40,6 @@
     <schema id="35" name="sample_app8_test"/>
     <schema id="36" name="sys"/>
     <schema id="37" name="test04"/>
+    <schema id="38" name="test05_development"/>
   </database-model>
 </dataSource>
