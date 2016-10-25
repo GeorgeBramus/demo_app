@@ -41,14 +41,67 @@
     <schema id="36" name="sys"/>
     <schema id="37" name="test04"/>
     <schema id="38" name="test05"/>
-    <table id="39" parent="1" name="posts">
-      <comment>Для постов на сайте</comment>
-    </table>
-    <column id="40" parent="39" name="title">
-      <data-type>tinytext|0</data-type>
+    <table id="39" parent="1" name="schema_migrations"/>
+    <table id="40" parent="1" name="users"/>
+    <table id="41" parent="1" name="microposts"/>
+    <column id="42" parent="39" name="version">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="41" parent="39" name="description">
-      <data-type>longtext|0</data-type>
+    <index id="43" parent="39" name="unique_schema_migrations">
+      <columns>version</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="44" parent="39" name="unique_schema_migrations">
+      <columns>version</columns>
+      <underlying-index>unique_schema_migrations</underlying-index>
+    </key>
+    <column id="45" parent="40" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
     </column>
+    <column id="46" parent="40" name="nama">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="47" parent="40" name="email">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="48" parent="40" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="49" parent="40" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <key id="50" parent="40" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="51" parent="41" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="52" parent="41" name="content">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="53" parent="41" name="user_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="54" parent="41" name="created_at">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="55" parent="41" name="updated_at">
+      <mandatory>1</mandatory>
+      <data-type>datetime|0</data-type>
+    </column>
+    <key id="56" parent="41" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
   </database-model>
 </dataSource>
